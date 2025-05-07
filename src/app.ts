@@ -20,7 +20,6 @@ app.use("/api/customers", customerRoutes);
 app.use("/api/bikes", bikeRoutes);
 app.use("/api/services", serviceRoutes);
 
-// Error handling middleware
 app.use((err: any, req: Request, res: Response, next: Function) => {
   console.error(err.stack);
   res.status(500).send({
